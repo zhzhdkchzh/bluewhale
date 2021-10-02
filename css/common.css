@@ -1,0 +1,153 @@
+body{
+/* 	background-color: #DEB887; */
+}
+#top{
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+
+}
+#backimg{
+	width: 100%;
+	height: auto;
+	margin-top: -10%;
+	position: relative;
+	z-index: 1;
+}
+#menu-bar{
+	width: 100%;
+	height: 100px;
+	background-color: rgb(0,0,0,0.5);
+	position: fixed;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;	
+    z-index: 3;
+}
+#logo{
+	 filter: invert(100%);
+	 width: 150px;
+	 height: auto;
+	 margin-left: 5vw;
+}
+.menu{
+	font-size: 20px;
+	color: white;
+	font-weight: 500;
+	margin: 0;
+	margin-top: 10px;
+}
+#category{
+margin-right: 5vw;
+    width: 60vw;
+    height: 50px;
+    display: flex;
+    border: 1px solid white;
+
+}
+.menu-box{
+	width: 25%;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+.menu-box:hover {
+	background-color: #DEB887;
+	
+}
+#top-comm{
+	font-size: 50px;
+	font-weight: 900;
+	color: white;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	left: 50%;
+	animation: fadein 5s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.page-title{
+    vertical-align: top;
+    word-break: keep-all;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    transform: skew(-0.03deg);
+    font-size: 24px;
+    line-height: 1.5;
+    color: #1e1e1e;
+}
+.page-text{
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    margin-bottom: 42px;
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    transform: skew(-0.03deg);
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.15px;
+    color: #1e1e1e;
+}
+#inner{
+	width: 60vw;
+	height: auto;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+.partner-list{
+	margin-bottom: 50px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    padding-left: 0;
+}
+.partner-list li{
+	position: relative;
+    float: left;
+    width: 25%;
+    height: 150px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.partner-list li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+ul, li, ol, dl {
+    list-style: none;
+}
+.partner-title {
+    margin-bottom: 20px;
+    font-family: 'NanumSquare';
+    font-weight: 900;
+    transform: skew(
+-0.03deg);
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.15px;
+    color: #1e1e1e;
+}
