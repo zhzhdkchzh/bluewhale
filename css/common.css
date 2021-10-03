@@ -119,6 +119,7 @@ margin-right: 5vw;
     border-top: 1px solid gray;
     border-left: 1px solid gray;
     padding-left: 0;
+    height: 450px;
 }
 .partner-list li{
 	position: relative;
