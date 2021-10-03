@@ -2,15 +2,22 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <title>blog</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 
 		<div id="menu-bar">
-			<img id="logo" src ="img/logo.png">
+			<a href="home.html" ><img id="logo" src ="img/logo.png"></a>
 			<div id="category">
 				<div class="menu-box" id="ins"><p class="menu">Insurance</p></div>
 				<div class="menu-box" id="ass"><p class="menu">Asset</p></div>
@@ -18,18 +25,48 @@
 				<div class="menu-box" id="cons"><p class="menu">Consulting</p></div>
 				<div class="menu-box" id="about"><p class="menu">About</p></div>
 			</div>
+				<div id="login" data-toggle="modal" data-backdrop="static" data-keyboard="true" data-bs-target="#exampleModal" ><p class="menu">Login</p></div>
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">관리자 로그인</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">사용자</label>
+            <input type="text" class="form-control" id="super-id">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">비밀번호</label>
+            <input type="password" class="form-control" id="super-pwd"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="login-proc">LOGIN</button>
+      </div>
+    </div>
+  </div>
+</div>
 		</div>
-	<div id="frame">
+		<!-- main frame -->
+	<article  id="frame">
 			<div id="top">
 			<img id="backimg"
 			src="img/background.jpg" />
 			<p id="top-comm">HOPE FOR A BETTER THE FUTURE</p>
 	</div>
 	
+	<div id=""></div>
 
 	<div id="container">
 		<div id="partner">
 			<div id="inner">
+			<div style="">
 			<h2 class="page-title">파트너사</h2>
 			<div class="page-text">아이엠은 다양한 제휴사와 함께 고객님의 삶을 서포트 합니다.</div>
 			<h3 class="partner-title">손해보험사</h3>
@@ -48,6 +85,8 @@
 						<li><div class="ani-right delay11"><img src="img/lotte.png" alt=""></div></li>
 			</ul>
 			</div>
+			</div>
+			<div>
 			<h3 class="partner-title">생명보험사</h3>
 			<div id="sonbo">
 			<ul class="partner-list life">
@@ -67,12 +106,13 @@
 						<li><div class="ani-right delay11"><img src="img/dongyanglife.png" alt=""></div></li>
 			</ul>
 			</div>
+			</div>
 		</div>
 		</div>
 	</div>
-</div>
+</article >
+	
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
