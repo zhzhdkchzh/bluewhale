@@ -40,7 +40,7 @@ body{
 }
 #category{
 margin-right: 5vw;
-    width: 60vw;
+    width: 30vw;
     height: 50px;
     display: flex;
     border: 1px solid white;
@@ -107,10 +107,10 @@ margin-right: 5vw;
     color: #1e1e1e;
 }
 #inner{
-	width: 60vw;
+	width: 40vw;
 	height: auto;
-	margin-left: 20vw;
-	margin-right: 20vw;
+	margin-left: 30vw;
+	margin-right: 30vw;
 	padding-top: 10vh;
 	padding-bottom: 10vh;
 }
@@ -151,4 +151,7 @@ ul, li, ol, dl {
     line-height: 1.75;
     letter-spacing: 0.15px;
     color: #1e1e1e;
+}
+.life{
+	height: 600px;
 }
