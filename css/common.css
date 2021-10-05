@@ -31,6 +31,7 @@ body{
     align-items: center;
     justify-content: space-around;
     z-index: 3;
+        flex-wrap: wrap;
 }
 #logo{
 	 filter: invert(100%);
@@ -43,13 +44,13 @@ body{
 	color: white;
 	font-weight: 500;
 	margin: 0;
-	margin-top: 10px;
+	margin-top: 30px;
 }
 #category{
     width: 60vw;
-    height: 50px;
+    height: 100px;
     display: flex;
-
+	
 }
 #login{
 	width: 5vw;
@@ -75,14 +76,34 @@ body{
 	background-color: #DEB887;
 	
 }
-#top-comm{
+#top-comm1{
+	font-size: 50px;
+	font-weight: 900;
+	color: white;
+	position: absolute;
+	top: 40%;
+	z-index: 2;
+	left: 60%;
+	animation: fadein 5s;
+}
+#top-comm2{
 	font-size: 50px;
 	font-weight: 900;
 	color: white;
 	position: absolute;
 	top: 50%;
 	z-index: 2;
-	left: 50%;
+	left: 60%;
+	animation: fadein 5s;
+}
+#top-comm3{
+	font-size: 50px;
+	font-weight: 900;
+	color: white;
+	position: absolute;
+	top: 60%;
+	z-index: 2;
+	left: 60%;
 	animation: fadein 5s;
 }
 @keyframes fadein {
@@ -173,3 +194,88 @@ ul, li, ol, dl {
 .life{
 	height: 600px;
 }
+#ins-menu{
+	height: 500px;
+	display: fixed;
+	display: none; 
+	width: 12vw; 
+	margin-top: 40px;
+	background-color: #DEB887;
+
+	
+}
+#ins-menu p {
+	color: white;
+	margin-top: 10px;
+}
+#slide-show{
+	width: 80vw;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	height: 200px;
+	margin-top: 10vh;
+	padding : 0;
+	background-size: 100% auto;
+}
+#slide-show ul,li{list-style:none;}
+    #slide-show{height:auto;overflow:hidden;}
+    #slide-show ul{width:calc(100% * 25);display:flex;animation:slide 25s infinite;} /* slide를 8초동안 진행하며 무한반복 함 */
+    #slide-show li{width:calc(100% / 25);height:200px;}
+ #slide-show li:nth-child(1){background-image:url('../img/meritz.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+   #slide-show li:nth-child(2){background-image :url('../img/kbsonbo.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(3){background-image :url('../img/dbsonbo.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(4){background-image :url('../img/hyundai.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(5){background-image :url('../img/nhsonbo.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(6){background-image :url('../img/samsung.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(7){background-image :url('../img/heungkuk.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(8){background-image :url('../img/mgsonbo.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(9){background-image :url('../img/hanhwa.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(10){background-image :url('../img/aig.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(11){background-image :url('../img/lotte.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(12){background-image :url('../img/miraelife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(13){background-image :url('../img/kblife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(14){background-image :url('../img/dblife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(15){background-image :url('../img/metlife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(16){background-image :url('../img/samsunglife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(17){background-image :url('../img/nhlife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(18){background-image :url('../img/hklife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(19){background-image :url('../img/prudential.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(20){background-image :url('../img/hanhwalife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(21){background-image :url('../img/abllife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(22){background-image :url('../img/cignalife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(23){background-image :url('../img/orangelife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(24){background-image :url('../img/kdblife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+    #slide-show li:nth-child(25){background-image :url('../img/dongyanglife.png');background-size: 20% auto; background-repeat: no-repeat;background-position: center center;}
+
+
+
+
+    @keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      4% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      8% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      12% {margin-left:-200%;} /* 35 ~ 50 : 변이 */
+      16% {margin-left:-300%;}
+      20% {margin-left:-400%;}
+      24% {margin-left:-500%;}
+      28% {margin-left:-600%;}
+      32% {margin-left:-700%;}
+      36% {margin-left:-800%;}
+      40% {margin-left:-900%;}
+      44% {margin-left:-1000%;}
+      48% {margin-left:-1100%;}
+      52% {margin-left:-1200%;}
+      56% {margin-left:-1300%;}
+      60% {margin-left:-1400%;}
+      64% {margin-left:-1500%;}
+      68% {margin-left:-1600%;}
+      72% {margin-left:-1700%;}
+      76% {margin-left:-1800%;}
+      80% {margin-left:-1900%;}
+      84% {margin-left:-2000%;}
+      88% {margin-left:-2100%;}
+      92% {margin-left:-2200%;}
+      96% {margin-left:-2300%;}
+      100% {margin-left:-2400%;}
+      
+    }
