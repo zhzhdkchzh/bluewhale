@@ -36,6 +36,28 @@ $(document).on('click', '#login-proc', function(){
 		superuser = "김승현";
 	}
 });
+$("#ins").on('mousewheel',function(e){
+var wheel = e.originalEvent.wheelDelta;
+if(wheel>0){
+} else {
+$("#ins-menu").fadeOut();
+$("#ins-menu").fadeOut("slow")
+}
+});
+$(document).ready(function(){
+	$("#ins").hover(function(){
+		$("#ins-menu").fadeIn();
+		$("#ins-menu").fadeIn("slow")
+		
+	}, function(){
+		$("#ins-menu").fadeOut();
+		$("#ins-menu").fadeOut("slow")
+		
+	});
+
+});
+
+
 function SHA256(s){
     var chrsz   = 8;
     var hexcase = 0;
