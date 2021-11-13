@@ -157,3 +157,7 @@ function SHA256(s){
     return binb2hex(core_sha256(str2binb(s), s.length * chrsz));
 }
 //
+$(document).on('click', '#about', function(){
+	changeHtml("<div id='art-box'>test</div>");	
+	
+});
