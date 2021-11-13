@@ -158,6 +158,14 @@ function SHA256(s){
 }
 //
 $(document).on('click', '#about', function(){
-	changeHtml("<div id='art-box'>test</div>");	
+	changeHtml("<div id='art-box'>"+
+					"<div id ='progress'>"+
+					"<progress value='0' max='100' id='pro-bar'></progress>"+
+					"</div>"+
+					"<div class='input-group'>"+
+  						"<input type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+  						"<span class='input-group-text'>$</span>"+
+					"</div>"+
+				"</div>");	
 	
 });
