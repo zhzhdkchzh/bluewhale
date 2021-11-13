@@ -163,9 +163,19 @@ $(document).on('click', '#about', function(){
 					"<progress value='0' max='100' id='pro-bar'></progress>"+
 					"</div>"+
 					"<div class='input-group'>"+
+						"<span class='input-group-text'>잉여자금</span>"+
   						"<input type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
   						"<span class='input-group-text'>$</span>"+
 					"</div>"+
+					"<div class='input-group'>"+
+						"<span class='input-group-text'>현재나이</span>"+
+  						"<input id='age' type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+					"</div>"+
+					"<button type='button' id='set-btn' class='btn btn-primary'>적용</button>"+
 				"</div>");	
+	
+});
+$(document).on('click', '#set-btn', function(){
+	$("#pro-bar").val($("#age").val());
 	
 });
