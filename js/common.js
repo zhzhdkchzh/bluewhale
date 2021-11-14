@@ -159,23 +159,78 @@ function SHA256(s){
 //
 $(document).on('click', '#about', function(){
 	changeHtml("<div id='art-box'>"+
-					"<div id ='progress'>"+
-					"<progress value='0' max='100' id='pro-bar'></progress>"+
-					"</div>"+
-					"<div class='input-group'>"+
-						"<span class='input-group-text'>잉여자금</span>"+
-  						"<input type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
-  						"<span class='input-group-text'>$</span>"+
-					"</div>"+
-					"<div class='input-group'>"+
-						"<span class='input-group-text'>현재나이</span>"+
-  						"<input id='age' type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
-					"</div>"+
-					"<button type='button' id='set-btn' class='btn btn-primary'>적용</button>"+
-				"</div>");	
-	
+					"<div id ='progress' class='progress'>"+
+  "<div class='progress-bar progress-bar-striped progress-bar-animated  bg-light' id='now-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+ "<div class='progress-bar progress-bar-striped progress-bar-animated ' id='late-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+  "<div class='progress-bar progress-bar-striped progress-bar-animated bg-danger' id='far-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+"</div>"+
+					"<div class='container'>"+
+						  "<div class='row'>"+
+							    "<div class='col'>"+
+							"<div class='input-group'>"+
+								"<span class='input-group-text'>수입&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>"+
+								"<input type='text'  placeholder= ' 단위(만원)'  class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<span class='input-group-text'>고정 지출</span>"+
+								"<input type='text'  placeholder= ' 단위(만원)'' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<span class='input-group-text'>변동 지출</span>"+
+								"<input type='text'  placeholder= ' 단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<span class='input-group-text'>잉여 자금</span>"+
+								"<input type='text'  placeholder= ' 단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<span class='input-group-text'>현재 나이</span>"+
+								"<input id='age' type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							    "</div>"+
+							   " <div class='col'>"+
+								  "<div class='input-group'>"+
+								"<input type='text' placeholder= '목적설정' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+								"<input type='text' placeholder= '단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<input type='text' placeholder= '목적설정' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+								"<input type='text' placeholder= '단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<input type='text' placeholder= '목적설정' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+								"<input type='text' placeholder= '단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<input type='text' placeholder= '목적설정' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+								"<input type='text' placeholder= '단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"<div class='input-group'>"+
+								"<input type='text' placeholder= '목적설정' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+								"<input type='text' placeholder= '단위(만원)' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+								"</div>"+
+								"<div class='col'>"+
+								"<div class='input-group'>"+
+								"<span class='input-group-text'>은퇴 시기</span>"+
+								"<input id='retire-age' type='text' class='form-control' aria-label='Dollar amount (with dot and two decimal places)'>"+
+							"</div>"+
+							"</br>"+
+								"<div class='d-grid gap-2 col-6 mx-auto'>"+
+								  "<button style  type='button' id='set-btn' class='btn btn-success'>적용</button>"+
+								 "</div>"+
+								 "</br>"+
+								 "<div class='d-grid gap-2 col-6 mx-auto'>"+
+								  "<button type='button' class='btn btn-secondary'>초기화</button>"+
+								"</div>"+
+							"</div>"+
+				"</div>"
+);	
 });
 $(document).on('click', '#set-btn', function(){
-	$("#pro-bar").val($("#age").val());
+
 	
+	$("#now-term").animate({ width : $("#age").val()+"%" },1000)
+	$("#late-term").animate({ width : $("#retire-age").val()-$("#age").val()+"%" },1000)
+	$("#far-term").animate({ width : 100-$("#retire-age").val()+"%" },1000)
 });
