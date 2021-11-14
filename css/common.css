@@ -288,7 +288,16 @@ ul, li, ol, dl {
 #progress{
 	width : 100%;
 	height : 40px;
-	margin-bottom: 60px;
 	margin-top: 60px;
 
+}
+#comment-tag{
+	width : 100%;
+	height: auto;
+	display : flex;
+	justify-content: space-between;
+	
+}
+#comment-tag p {
+	font-weight : bold;
 }
