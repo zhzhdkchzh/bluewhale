@@ -164,6 +164,7 @@ $(document).on('click', '#about', function(){
  "<div class='progress-bar progress-bar-striped progress-bar-animated ' id='late-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
   "<div class='progress-bar progress-bar-striped progress-bar-animated bg-danger' id='far-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
 "</div>"+
+  "<div id='comment-tag'><p>0세</p><p>100세</p></div>"+
 					"<div class='container'>"+
 						  "<div class='row'>"+
 							    "<div class='col'>"+
@@ -221,16 +222,34 @@ $(document).on('click', '#about', function(){
 								 "</div>"+
 								 "</br>"+
 								 "<div class='d-grid gap-2 col-6 mx-auto'>"+
-								  "<button type='button' class='btn btn-secondary'>초기화</button>"+
+								  "<button id='reset-btn' type='button' class='btn btn-secondary'>초기화</button>"+
 								"</div>"+
 							"</div>"+
 				"</div>"
 );	
 });
 $(document).on('click', '#set-btn', function(){
-
+if($("#retire-age").val() >= 100){
+		alert("은퇴시기가 100세를 초과했습니다.")
+		return;
+}
+if($("#retire-age").val() == "" || $("#retire-age").val() == undefined || $("#retire-age").val() == null){
+		alert("은퇴시기를 설정해주세요.")
+		return;
+}
+if($("#age").val() >= 100){
+		alert("잘못된 연령설정입니다.")
+		return;
+}
+if($("#age").val() == "" || $("#age").val() == undefined || $("#age").val() == null){
+		alert("현재 연령을 설정해주세요.")
+		return;
+}
 	
 	$("#now-term").animate({ width : $("#age").val()+"%" },1000)
 	$("#late-term").animate({ width : $("#retire-age").val()-$("#age").val()+"%" },1000)
 	$("#far-term").animate({ width : 100-$("#retire-age").val()+"%" },1000)
+});
+$(document).on('click', '#reset-btn', function(){
+	$("input[type=text]").val("");
 });
