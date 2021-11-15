@@ -158,13 +158,10 @@ function SHA256(s){
 }
 //
 $(document).on('click', '#about', function(){
-	changeHtml("<div id='art-box'>"+
-					"<div id ='progress' class='progress'>"+
-  "<div class='progress-bar progress-bar-striped progress-bar-animated  bg-light' id='now-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
- "<div class='progress-bar progress-bar-striped progress-bar-animated ' id='late-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
-  "<div class='progress-bar progress-bar-striped progress-bar-animated bg-danger' id='far-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
-"</div>"+
-  "<div id='comment-tag'><p>0세</p><p>100세</p></div>"+
+	changeHtml(
+	"<div id='art-box'>"+
+/*
+  +
 					"<div class='container'>"+
 						  "<div class='row'>"+
 							    "<div class='col'>"+
@@ -225,9 +222,167 @@ $(document).on('click', '#about', function(){
 								  "<button id='reset-btn' type='button' class='btn btn-secondary'>초기화</button>"+
 								"</div>"+
 							"</div>"+
-				"</div>"
+				"</div>"+*/
+				
+"<div th:fragment='wrapper' class='container-fluid custom-font-size pt-4'>"+
+    "<div class='card shadow mb-3'>"+
+        "<div class='card-header py-2'>"+
+            "<h6 class='m-0 font-weight-bold text-primary'>LIFE CONSULTING</h6>"+
+        "</div>"+
+        "<div class='card-body'>"+
+            "<form id='record-search-form' name='record-search-form'>"+
+                "<div class='col-10 d-inline-block'>"+
+
+                    "<div class='form-row'>"+
+                        "<div class='form-group col-3 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px!important;'>고정지출</label>"+
+                            "<input type='text' class='form-control'  placeholder='고정지출'>"+
+                        "</div>"+
+                        "<div class='form-group col-3 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px !important;'>변동지출</label>"+
+                            "<input type='text' class='form-control' placeholder='변동지출'>"+
+                        "</div>"+
+                        "<div class='form-group col-3 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px !important;'>잉여자금</label>"+
+                            "<input type='text' class='form-control'  placeholder='잉여자금'>"+
+                        "</div>"+
+						"<div class='form-group col-3 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 30px !important;'>수입</label>"+
+                            "<input type='text' class='form-control'  placeholder='수입'>"+
+                        "</div>"+
+                    "</div>"+
+                    "<div class='form-row'>"+
+                        "<div class='form-group col-6 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px !important;'>현재연령</label>"+
+                            "<input type='text' class='form-control' name='age' id='age' placeholder='현재연령' >"+
+                        "</div>"+
+                        "<div class='form-group col-6 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px !important;'>은퇴시기</label>"+
+                            "<input type='text' class='form-control' name='retire-age' id='retire-age' placeholder='은퇴시기'>"+
+                        "</div>"+
+                    "</div>"+
+                "</div><div class='col-2 text-center p-3 d-inline-block'>"+
+                    "<div class='form-row'>"+
+                        "<div class='form-group col-6'>"+
+                            "<button type='button' class='form-control btn btn-primary before-search-btn'>이전설정</button>"+
+                        "</div>"+
+                        "<div class='form-group col-6'>"+
+                            "<button type='button' class='form-control btn btn-primary form-reset-btn' id='reset-btn'>초기화</button>"+
+                        "</div>"+
+                    "</div>"+
+                    "<div class='form-row'>"+
+                        "<div class='form-group col-12'>"+
+                            "<button type='button' class='form-control btn btn-primary py-2 h-auto record-search-btn' id='set-btn'>설정</button>"+
+                        "</div>"+
+                    "</div>"+
+                    "<div class='form-row'>"+
+                        "<span></span>"+
+                    "</div>"+
+                "</div>"+
+                "<div class='col-12'>"+
+                    "<div class='form-row'>"+
+                        "<button type='button' class='btn btn-light detail-search-toggle mx-auto'>목표설정<i class='fas fa-arrow-down'></i>"+
+                        "</button>"+
+                    "</div>"+
+                    "<div class='form-row detail-search-div'>"+
+                        "<button type='button' class='btn btn-primary detail-search-btn' style='float:right;margin-right:10px;display:none;'>"+
+                            "설정 초기화"+
+                        "</button>"+
+                        "<div class='form group col-12 d-flex py-1'>"+
+                            "<select class='form-control mx-1 goal-name-item'>"+
+                                "<option value='' selected>목표선택</option>"+
+                                "<option value='자차구매'>자차구매</option>"+
+								"<option value='결혼자금'>결혼자금</option>"+
+								"<option value='자택마련비용'>자택마련비용</option>"+
+								"<option value='자녀교육비용'>자녀교육비용</option>"+
+                            "</select>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                        "</div>"+
+						"<div class='form group col-12 d-flex py-1'>"+
+                            "<select class='form-control mx-1 goal-name-item'>"+
+                                "<option value='' selected>목표선택</option>"+
+                                "<option value='자차구매'>자차구매</option>"+
+								"<option value='결혼자금'>결혼자금</option>"+
+								"<option value='자택마련비용'>자택마련비용</option>"+
+								"<option value='자녀교육비용'>자녀교육비용</option>"+
+                            "</select>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                        "</div>"+
+						"<div class='form group col-12 d-flex py-1'>"+
+                            "<select class='form-control mx-1 goal-name-item'>"+
+                                "<option value='' selected>목표선택</option>"+
+                                "<option value='자차구매'>자차구매</option>"+
+								"<option value='결혼자금'>결혼자금</option>"+
+								"<option value='자택마련비용'>자택마련비용</option>"+
+								"<option value='자녀교육비용'>자녀교육비용</option>"+
+                            "</select>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                        "</div>"+
+						"<div class='form group col-12 d-flex py-1'>"+
+                            "<select class='form-control mx-1 goal-name-item'>"+
+                                "<option value='' selected>목표선택</option>"+
+                                "<option value='자차구매'>자차구매</option>"+
+								"<option value='결혼자금'>결혼자금</option>"+
+								"<option value='자택마련비용'>자택마련비용</option>"+
+								"<option value='자녀교육비용'>자녀교육비용</option>"+
+                            "</select>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                        "</div>"+
+						"<div class='form group col-12 d-flex py-1'>"+
+                            "<select class='form-control mx-1 goal-name-item'>"+
+                                "<option value='' selected>목표선택</option>"+
+                                "<option value='자차구매'>자차구매</option>"+
+								"<option value='결혼자금'>결혼자금</option>"+
+								"<option value='자택마련비용'>자택마련비용</option>"+
+								"<option value='자녀교육비용'>자녀교육비용</option>"+
+                            "</select>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                        "</div>"+
+						
+                    "</div>"+
+                "</div>"+
+            "</form>"+
+        "</div>"+
+    "</div>"+
+    "<div class='card shadow mb-3'>"+
+        "<div class='card-header py-2'>"+
+            "<div class='d-inline-block rec-button-div'>"+
+                 "<h6 class='m-0 font-weight-bold text-primary'>결과</h6>"+
+            "</div>"+
+        "</div>"+
+        "<div class='card-body'>"+
+            "<div class='table-responsive'>"+
+				"<div id ='progress' class='progress'>"+
+					"<div class='progress-bar progress-bar-striped progress-bar-animated' id='now-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+					"<div class='progress-bar progress-bar-striped progress-bar-animated bg-warning' id='late-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+					"<div class='progress-bar progress-bar-striped progress-bar-animated bg-danger' id='far-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+				"</div>"+
+				"<div id='comment-tag'><p>0세</p><p>100세</p></div>"+
+            "</div>"+
+            "<div class='text-center'>"+
+                
+            "</div>"+
+            "<div class='player-div'>"+
+                
+            "</div>"+
+        "</div>"+
+    "</div>"+
+"</div>"
 );	
 });
+$(document).on('click', '.detail-search-toggle', function () {
+    $(this).find('i').toggleClass('fa-arrow-down fa-arrow-up');
+    $('.detail-search-div').slideToggle();
+    
+    $('.detail-search-btn').toggle();
+});
+
+
 $(document).on('click', '#set-btn', function(){
 if($("#retire-age").val() >= 100){
 		alert("은퇴시기가 100세를 초과했습니다.")
@@ -252,4 +407,12 @@ if($("#age").val() == "" || $("#age").val() == undefined || $("#age").val() == n
 });
 $(document).on('click', '#reset-btn', function(){
 	$("input[type=text]").val("");
+});
+$(document).on('click', '.detail-search-btn', function () {
+    $(".detail-search-div").find(":text, :hidden").each(function (index, item) {
+       $(item).val('');
+    })
+	$(".goal-name-item").find("option:eq(0)").each(function (index, item) {
+       $(item).prop("selected", true);
+    })
 });
