@@ -285,10 +285,7 @@ $(document).on('click', '#about', function(){
                         "</button>"+
                     "</div>"+
                     "<div class='form-row detail-search-div'>"+
-                        "<button type='button' class='btn btn-primary detail-search-btn' style='float:right;margin-right:10px;display:none;'>"+
-                            "설정 초기화"+
-                        "</button>"+
-                        "<div class='form group col-12 d-flex py-1'>"+
+                        "<div class='form group col-12 d-flex py-1 goal-div1'>"+
                             "<select class='form-control mx-1 goal-name-item'>"+
                                 "<option value='' selected>목표선택</option>"+
                                 "<option value='자차구매'>자차구매</option>"+
@@ -296,10 +293,10 @@ $(document).on('click', '#about', function(){
 								"<option value='자택마련비용'>자택마련비용</option>"+
 								"<option value='자녀교육비용'>자녀교육비용</option>"+
                             "</select>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                            "<input type='text' class='form-control' name='goal-input' id='goal-input' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='goal-money' id='goal-money' placeholder='필요자금'>"+
                         "</div>"+
-						"<div class='form group col-12 d-flex py-1'>"+
+						"<div class='form group col-12 d-flex py-1 goal-div2'>"+
                             "<select class='form-control mx-1 goal-name-item'>"+
                                 "<option value='' selected>목표선택</option>"+
                                 "<option value='자차구매'>자차구매</option>"+
@@ -307,10 +304,10 @@ $(document).on('click', '#about', function(){
 								"<option value='자택마련비용'>자택마련비용</option>"+
 								"<option value='자녀교육비용'>자녀교육비용</option>"+
                             "</select>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                            "<input type='text' class='form-control'name='goal-input' id='goal-input' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control'name='goal-money' id='goal-money' placeholder='필요자금'>"+
                         "</div>"+
-						"<div class='form group col-12 d-flex py-1'>"+
+						"<div class='form group col-12 d-flex py-1 goal-div3'>"+
                             "<select class='form-control mx-1 goal-name-item'>"+
                                 "<option value='' selected>목표선택</option>"+
                                 "<option value='자차구매'>자차구매</option>"+
@@ -318,10 +315,10 @@ $(document).on('click', '#about', function(){
 								"<option value='자택마련비용'>자택마련비용</option>"+
 								"<option value='자녀교육비용'>자녀교육비용</option>"+
                             "</select>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                            "<input type='text' class='form-control' name='goal-input' id='goal-input' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='goal-money' id='goal-money' placeholder='필요자금'>"+
                         "</div>"+
-						"<div class='form group col-12 d-flex py-1'>"+
+						"<div class='form group col-12 d-flex py-1 goal-div4'>"+
                             "<select class='form-control mx-1 goal-name-item'>"+
                                 "<option value='' selected>목표선택</option>"+
                                 "<option value='자차구매'>자차구매</option>"+
@@ -329,10 +326,10 @@ $(document).on('click', '#about', function(){
 								"<option value='자택마련비용'>자택마련비용</option>"+
 								"<option value='자녀교육비용'>자녀교육비용</option>"+
                             "</select>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                            "<input type='text' class='form-control' name='goal-input' id='goal-input' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='goal-money' id='goal-money' placeholder='필요자금'>"+
                         "</div>"+
-						"<div class='form group col-12 d-flex py-1'>"+
+						"<div class='form group col-12 d-flex py-1 goal-div5'>"+
                             "<select class='form-control mx-1 goal-name-item'>"+
                                 "<option value='' selected>목표선택</option>"+
                                 "<option value='자차구매'>자차구매</option>"+
@@ -340,8 +337,8 @@ $(document).on('click', '#about', function(){
 								"<option value='자택마련비용'>자택마련비용</option>"+
 								"<option value='자녀교육비용'>자녀교육비용</option>"+
                             "</select>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='목표 직접입력'>"+
-                            "<input type='text' class='form-control' name='start-duration' placeholder='필요자금'>"+
+                            "<input type='text' class='form-control' name='goal-input' id='goal-input' placeholder='목표 직접입력'>"+
+                            "<input type='text' class='form-control' name='goal-money' id='goal-money' placeholder='필요자금'>"+
                         "</div>"+
 						
                     "</div>"+
@@ -357,15 +354,16 @@ $(document).on('click', '#about', function(){
         "</div>"+
         "<div class='card-body'>"+
             "<div class='table-responsive'>"+
+			"<div id='comment-tag'><p>0세</p><p>100세</p></div>"+
 				"<div id ='progress' class='progress'>"+
-					"<div class='progress-bar progress-bar-striped progress-bar-animated' id='now-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
+					"<div class='progress-bar progress-bar-striped progress-bar-animated' id='now-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'> </div>"+
 					"<div class='progress-bar progress-bar-striped progress-bar-animated bg-warning' id='late-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
 					"<div class='progress-bar progress-bar-striped progress-bar-animated bg-danger' id='far-term' role='progressbar'  aria-valuemin='0' aria-valuemax='100'></div>"+
 				"</div>"+
-				"<div id='comment-tag'><p>0세</p><p>100세</p></div>"+
-            "</div>"+
-            "<div class='text-center'>"+
+				
+			            "<div id='text-center'>"+
                 
+						"</div>"+
             "</div>"+
             "<div class='player-div'>"+
                 
@@ -400,19 +398,17 @@ if($("#age").val() == "" || $("#age").val() == undefined || $("#age").val() == n
 		alert("현재 연령을 설정해주세요.")
 		return;
 }
-	
+$("#text-center").empty();
 	$("#now-term").animate({ width : $("#age").val()+"%" },1000)
 	$("#late-term").animate({ width : $("#retire-age").val()-$("#age").val()+"%" },1000)
 	$("#far-term").animate({ width : 100-$("#retire-age").val()+"%" },1000)
+	$("#now-term").text("현재나이");
+	$("#late-term").text("경제활동시기");
+	$("#far-term").text("비경제활동시기");
+	$("#text-center").append("<i class='fad fa-angle-double-up fa-2x' style='margin-left : "+$('#age').val()+"%"+"; margin-right: -7px;'></i>");
+	
 });
 $(document).on('click', '#reset-btn', function(){
 	$("input[type=text]").val("");
 });
-$(document).on('click', '.detail-search-btn', function () {
-    $(".detail-search-div").find(":text, :hidden").each(function (index, item) {
-       $(item).val('');
-    })
-	$(".goal-name-item").find("option:eq(0)").each(function (index, item) {
-       $(item).prop("selected", true);
-    })
-});
+
