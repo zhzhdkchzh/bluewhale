@@ -299,3 +299,6 @@ ul, li, ol, dl {
 #comment-tag p {
 	font-weight : bold;
 }
+#text-center{
+	height: auto;
+}
