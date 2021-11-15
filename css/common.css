@@ -281,14 +281,12 @@ ul, li, ol, dl {
     }
 #art-box{
 	padding-top: 100px;
-	padding-left: 5%;
-	padding-right : 5%;
-	backgound-color: #fbfdfe;
+	padding-left: 2%;
+	padding-right : 2%;
 }
 #progress{
 	width : 100%;
 	height : 40px;
-	margin-top: 60px;
 
 }
 #comment-tag{
