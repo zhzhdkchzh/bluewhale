@@ -256,9 +256,13 @@ $(document).on('click', '#about', function(){
                             "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px !important;'>현재연령</label>"+
                             "<input type='text' class='form-control' name='age' id='age' placeholder='현재연령' >"+
                         "</div>"+
-                        "<div class='form-group col-6 d-flex'>"+
+                        "<div class='form-group col-3 d-flex'>"+
                             "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 26px !important;'>은퇴시기</label>"+
                             "<input type='text' class='form-control' name='retire-age' id='retire-age' placeholder='은퇴시기'>"+
+                        "</div>"+
+						"<div class='form-group col-3 d-flex'>"+
+                            "<label class='m-0 font-weight-bold text-primary search-label' style='margin-right: 6px !important;'>노후생활비</label>"+
+                            "<input type='text' class='form-control' name='retire-age' id='retire-age' placeholder='노후생활비'>"+
                         "</div>"+
                     "</div>"+
                 "</div><div class='col-2 text-center p-3 d-inline-block'>"+
