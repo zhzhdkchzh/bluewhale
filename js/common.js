@@ -405,7 +405,15 @@ $("#text-center").empty();
 	$("#now-term").text("현재나이");
 	$("#late-term").text("경제활동시기");
 	$("#far-term").text("비경제활동시기");
-	$("#text-center").append("<i class='fad fa-angle-double-up fa-2x' style='margin-left : "+$('#age').val()+"%"+"; margin-right: -7px;'></i>");
+	var age = $('#age').val();
+	var ageToretire = $("#retire-age").val()-$('#age').val();
+	$("#text-center").append(
+	"<i class='fad fa-angle-double-up fa-2x' style='margin-left : "+(age-0.4)+"%"+";'></i>"+
+	"<i class='fad fa-angle-double-up fa-2x' style='margin-left : "+(ageToretire-0.8)+"%"+";'></i>"+
+	"<div id='progress-point'>"+
+	"<span  style='margin-left : "+(age-0.6)+"%"+"; '>"+age+"세</span>"+
+	"<span  style='margin-left : "+(ageToretire-1.3)+"%"+";'>"+$("#retire-age").val()+"세</span>"+
+	"</div>").hide().show('slow');
 	
 });
 $(document).on('click', '#reset-btn', function(){
