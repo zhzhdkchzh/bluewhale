@@ -302,3 +302,7 @@ ul, li, ol, dl {
 #text-center{
 	height: auto;
 }
+#progress-point{
+	width : 100%;
+	height: auto;
+}
